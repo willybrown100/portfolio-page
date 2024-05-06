@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+::after,
+::before{
+ box-sizing: border-box;
+/* margin: 0 */
+}
+/* temporary */
+
+
+html {font-size: 100%;} /*16px*/
+
+:root{
+  /* primary shades */
+  --primary-100:#def2d1;
+  --primary-200:#bee5a3;
+  --primary-300:#9dd975;
+  --primary-400:#7dcc47;
+
+  --primary-500:#5cbf19;
+
+--primary-600:#4a9914;
+--primary-700:#37730f;
+--primary-800:#254c0a;
+--primary-900:#122605;
+/* secondary color== */
+  --secondary-100:#cccdd5;
+  --secondary-200:#999cab;
+  --secondary-300:#666a81;
+  --secondary-400:#333957;
+
+  --secondary-500:#00072d;
+
+--secondary-600:#000624;
+--secondary-700:#00041b;
+--secondary-800:#000312;
+--secondary-900:#000109;
+/* grey shades */
+--grey-50:#f8fafc;
+--grey-100:#e0e3e8;
+--grey-200:#c1c7d1;
+--grey-300:#a2acb9;
+--grey-400:#8390a2;
+--grey-500:#64748b;
+--grey-600:#505d6f;
+--grey-700:#3c4653;
+--grey-800:#282e38;
+--grey-900:#14171c;
+
+ --black:#222;
+ --white:#fff;
+ --red-light:#f8d7da;
+ --red-dark:#842029;
+ --green-light:#d1e7dd;
+ --green-dark:#0f5132;
+ --headingfont: 'Spectral SC', serif;
+ --bodyfont: 'Agdasima', sans-serif;
+ --smalltext: 0.7em;
+ --letter-spacing:1px ;
+ --border-radius: 0.4rem;
+ --max-width: 1120px;
+ --transition:all 0.4s linear ;
+ --fixed-width:600px;
+ --box-shadow-1:0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0rgba(0,0,0,0.2);
+ --box-shadow-2:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px 0rgba(0,0,0,0.2);
+ --box-shadow-3:5px 10px 15px 3px rgba(0,0,0,0.2),0 4px 6px 0rgba(0,0,0,0.2);
+}
+body {
+  background: var(--grey-50);
+  font-family: var(--bodyfont);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--grey-900);
+}
+
+p {margin-bottom: 1rem;
+ max-width: 35rem;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0 ;
+  margin-bottom: 1.38rem;
+  font-family: var(--headingfont);
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+
+}
+
+h2 {font-size: 2.441rem;}
+
+h3 {font-size: 1.953rem;}
+
+h4 {font-size: 1.563rem;}
+
+h5 {font-size: 1.25rem;}
+
+small, .text_small {font-size:var(--smalltext);}
+
+a{
+text-decoration: none;
+}
+ul{
+ list-style-type: none;
+ padding: 0;
+}
+
+img{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.section-center{
+width: 100%;
+max-width: 1170px;
+margin: 0 auto;
+padding: 4rem 1rem;
+}
+
+
+.loader {
+  width: 45px;
+  aspect-ratio: 0.75;
+  --c: no-repeat linear-gradient(#333 0 0);
+  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  background-size: 20% 50%;
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
