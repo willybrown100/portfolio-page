@@ -40,7 +40,7 @@ import { useSearchParams } from "react-router-dom";
 function Filter() {
    const [month, setMont] = useState("january");
   const [searchParams, setSearchParams] = useSearchParams();
-  // const currentFilter = searchParams.get(filterField) || options[0].value;
+
   const handleClick = function (e) {
     searchParams.set("month", e.target.value);
     setSearchParams(searchParams);
